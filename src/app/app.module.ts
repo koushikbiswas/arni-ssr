@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CommonModule } from '@angular/common';
 // import { TransferHttpCacheModule } from '@nguniversal/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 // import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { LoginComponent } from './component/frontend/login/login.component';
 import { CookieService } from 'ngx-cookie-service';
@@ -123,6 +123,10 @@ import { ListingSubscriptionComponent } from './component/backend/newsletterlist
 import { ListingSubcategoryComponent } from './component/backend/newsletterlists/listing-subcategory/listing-subcategory.component';
 import { AddEditSenderappComponent } from './component/backend/newsletterlists/add-edit-senderapp/add-edit-senderapp.component';
 import { HttpLoaderComponent } from './http-loader/http-loader.component';
+import { LoaderInterceptor } from './loader.interceptor';
+import { HttpLoaderService } from './http-loader.service';
+
+
 /**End Backend Component** */
 @NgModule({
   declarations: [
@@ -259,7 +263,7 @@ import { HttpLoaderComponent } from './http-loader/http-loader.component';
     ImageGalleryModule,
     VideoModule
   ],
-  providers: [CookieService, AuthGuard, ApiService, SidenavService,DatePipe],
+  providers: [CookieService, AuthGuard, ApiService, SidenavService,DatePipe, HttpLoaderService, { provide: HTTP_INTERCEPTORS, useClass: LoaderInterceptor, multi: true, }],
   bootstrap: [AppComponent],
   schemas:[CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   entryComponents: [comingSoonDialog, DialogPrivacyDialog, DialogTermsDialog,CommonVideoModalComponent, NewslatterDialogComponent,VideoModalComponent, NewslattersuccessDialogComponent, CommonTestimonialVideoModalComponent,EventModal]
