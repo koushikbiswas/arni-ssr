@@ -51,9 +51,10 @@ export class HeaderComponent implements OnInit {
   }
   
   logOut() {
-    this.cookieService.deleteAll();
-    this.router.navigateByUrl('/');
-    // console.log("logout");
+    this.cookieService.deleteAll('/');
+      setTimeout(()=>{
+          this.router.navigate(['/']);
+      },500);
   }
 
   openDialog(): void {

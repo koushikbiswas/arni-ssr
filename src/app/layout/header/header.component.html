@@ -192,10 +192,10 @@
                   <mat-list-item fxFlex routerLinkActive="activemenu">
                     <a [routerLink]="['/contact']">Contact</a>
                   </mat-list-item>
-                  <mat-list-item *ngIf="userCookies.type == 'admin'" fxFlex routerLinkActive="activemenu">
+                  <mat-list-item *ngIf="userCookies != null && userCookies.type == 'admin'" fxFlex routerLinkActive="activemenu">
                     <a [routerLink]="['/admin-dashboard']">Dashboard</a>
                   </mat-list-item>
-                  <mat-list-item *ngIf="userCookies.type == 'affiliate'" fxFlex routerLinkActive="activemenu">
+                  <mat-list-item *ngIf="userCookies != null && userCookies.type == 'affiliate'" fxFlex routerLinkActive="activemenu">
                     <a [routerLink]="['/affiliate-dashboard']">Dashboard</a>
                   </mat-list-item>
                 </span>
