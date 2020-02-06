@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
   public buttonName:any= 'Login';
   public signUpRouteingUrl: any = { 
     "path":"sign-up",
-    "buttonName":"sign up",
+    // "buttonName":"sign up",
     "customLink":"",
     "customURl":""
   };
@@ -43,6 +43,7 @@ export class LoginComponent implements OnInit {
   };
   public routerStatus: any;
   public userData: any = {};
+  public defaultLoginUrl = '/login';
     constructor(private readonly meta: MetaService, public apiService:ApiService, public router: Router, public cookieService: CookieService) { 
 
     this.meta.setTitle('Arniefonseca - Login');
@@ -80,14 +81,14 @@ export class LoginComponent implements OnInit {
 
     goto() {
       //console.log('sadfdff');
-      if (this.router.url == '/login') {
-        this.router.navigateByUrl('/admin-dashboard');
+      // if (this.router.url == '/login') {
+      //   this.router.navigateByUrl('/admin-dashboard');
   
-      } else if (this.router.url == '/login') {
+      // } else if (this.router.url == '/login') {
   
-        this.router.navigateByUrl('/affiliate-dashboard');
+      //   this.router.navigateByUrl('/affiliate-dashboard');
   
-      } 
+      // } 
     }
 
   }

@@ -208,7 +208,10 @@ const routes: Routes = [
   data : {requestcondition : {source :'video_management_view',condition : {} }, endpoint : 'datalist'}
 },
   /**Frontend Routing**/
+  
   { path: 'login', component: LoginComponent },
+  { path: 'login/:id', component: LoginComponent },
+
   { path: 'forget-password', component: ForgetPasswordComponent },
   { path: 'reset-password', component: ResetPasswordComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -872,7 +875,7 @@ data:{
   { path: 'manage-commission-affiliate', component: CommissionReportComponent },
   { path: 'my-customers', component: MyCustomersAffiliateComponent },
 
-  { path: '**', component: LoginComponent },
+  // { path: '**', component: LoginComponent },
 ];
 
 @NgModule({
