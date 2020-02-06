@@ -132,13 +132,13 @@
             <span class="topmenuiconlogo">
               <span class="logowrappersml" fxFlex><a [routerLink]="['']"><img src="../../assets/images/logomain.png"
                     class="landinglogoblock1"></a></span>
-              <button mat-icon-button (click)="toggleNavbar()" fxShow="true">
+              <button mat-icon-button (click)="toggleNavbar()" fxShow="true" fxHide.gt-sm>
                 <mat-icon>menu</mat-icon>
               </button>
               <span class="menu-spacer"></span>
             </span>
 
-            <span fxShow="true" class="smlmenudiv">
+            <span fxShow="true" class="smlmenudiv" [ngClass]="{ 'show': navbarOpen }">
               <mat-nav-list fxLayout>
                 <span class="pagelogowrapper" fxFlex><a [routerLink]="['']"><img src="../../assets/images/logo.png"
                       class="landinglogoblock1"></a></span>

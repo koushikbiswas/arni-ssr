@@ -39,14 +39,14 @@
   .homeblock1contentright .mat-list-base .mat-list-item .mat-list-item-content{padding:0 4px}
   .singleteam{height:auto!important;box-sizing:border-box;margin-bottom:30px;width:calc(1/2*100% - (1 - 1/2)*30px)!important}
   .probidhomeblock4 .mat-list-base.lists .mat-list-item{padding:13px;width:46.5%}
-  .vpheaderwrapper .mat-nav-list a{font-size:13px}
+  .vpheaderwrapper .mat-nav-list a{font-size:13px!important;padding: 0 4px!important;}
   .mat-drawer{position:relative;z-index:4;display:block;position:inherit;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%,0,0)}
   .mat-drawer-container.mat-drawer-opened{position:absolute;z-index:999;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:visible}
   .videoclsgen{float:none;margin:0 auto;display:block}
   .generalcls .mat-card-content{display:block;text-align:center}
   .vpblock2left .btnyellow{float:none}
   .headertitlerightdesign{display:none!important}
-  .mat-card-header .mat-card-title span{ width:100%; display:inline;text-align:center}
+  .mat-card-header .mat-card-title span{display:block;text-align:center}
   .ptb-77.mat-card{padding-top:30px!important;padding-bottom:30px!important}
   .vpheaderwrapper.mat-card{background-color:#47484a!important;position:inherit!important}
   .vpheaderwrapper .mat-list-base .mat-list-item .mat-list-item-content,.vpheaderwrapper .mat-list-base .mat-list-option .mat-list-item-content{padding:0 8px}
